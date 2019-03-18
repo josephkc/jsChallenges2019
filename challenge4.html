@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+        body {
+            margin: 2%;
+            border: 1px solid black;
+            background-color: #b3b3b3;
+        }
+
+        #image {
+            line-height: 325px;
+            width: 388px;
+            height: 325px;
+            border: 5px solid black;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #8e68ff;
+            background-size: 100%;
+            margin-bottom: 25px;
+            font-size: 150%;
+        }
+
+        .preview {
+            width: 10%;
+            margin-left: 17%;
+            border: 10px solid black;
+        }
+
+        img {
+            width: 95%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <script>
+        // I used Two functions here.  Starter idea at: 
+        // https://codepen.io/ColleenEMc/pen/XmZzWw
+
+        console.log('the start');
+        // var changeThis = document.getElementById('image');
+        // console.log(changeThis);
+
+        function setPic(pic) {
+            var changeThis = document.getElementById('image');
+            console.log(changeThis);
+            console.log("this: " + this);
+
+            var imgUrl = pic.src;
+
+            changeThis.style.backgroundImage = "url(" + imgUrl + ")";
+
+            changeThis.innerHTML = pic.alt;
+        }
+
+        function unDo() {
+            var changeThis = document.getElementById('image');
+            changeThis.style.backgroundImage = "none";
+            changeThis.innerHTML = "Hover or tab over/into an image below.";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+    <div id="image">
+        Hover or tab over/into an image below.
+    </div>
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)" onmouseleave="unDo()" tabindex="1"
+        alt="Elephant" src="https://img-s3.onedio.com/id-5883617294a616d414895112/rev-0/raw/s-5fc048fc3e223ae1db4c4ab0085f1db3cfec711f.jpg">
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)" onmouseleave="unDo()" tabindex="2"
+        alt="Pig" src="http://1.bp.blogspot.com/-L6rLqBPjGcA/UqtDkvbtraI/AAAAAAAAACw/1HvnOktdxXo/s1600/042adc702f95ca3bc450463847ba11c0.jpg">
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)" onmouseleave="unDo()" tabindex="3"
+        alt="Turtle" src="https://i.redd.it/d0umlg31fpt11.jpg">
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)" onmouseleave="unDo()" tabindex="4"
+        alt="Lamb" src="https://c.stocksy.com/a/Lbo000/z9/194515.jpg?1549641283">
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)" onmouseleave="unDo()" tabindex="5"
+        alt="Squirrel" src="https://feedingnature.com/wp-content/uploads/2015/10/baby-squirrel.png">
+
+    <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+    <img class="preview" onmouseover="setPic(this)" onfocus="setPic(this)t" onmouseleave="unDo()" tabindex="6"
+        alt="Penguin" src="https://i.pinimg.com/originals/d9/b3/ae/d9b3ae779f3c1b95b2dbac89327924d1.jpg">
+
+
+
+</body>
+
+</html>
